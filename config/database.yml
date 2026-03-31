@@ -11,7 +11,7 @@
 #
 default: &default
   adapter: mysql2
-  encoding: utf8mb4
+  encoding: utf8
   pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
   username: root
   password: asdfghjkl
@@ -48,8 +48,15 @@ test:
 # Read https://guides.rubyonrails.org/configuring.html#configuring-a-database
 # for a full overview on how database connection configuration can be specified.
 #
+# production:
+#   <<: *default
+#   database: furima_47727_production
+#   username: furima_47727
+#   password: <%= ENV["FURIMA_47727_DATABASE_PASSWORD"] %>
+
+# 本番環境（Render）の設定
 production:
-  <<: *default
-  database: furima_47727_production
-  username: furima_47727
-  password: <%= ENV["FURIMA_47727_DATABASE_PASSWORD"] %>
+  adapter: postgresql
+  encoding: unicode
+  pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
+  url: <%= ENV['DATABASE_URL'] %>
