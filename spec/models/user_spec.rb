@@ -50,7 +50,8 @@ RSpec.describe User, type: :model do
       it 'passwordが不適切だと登録できない' do
         invalid_passwords = [
           { val: '00000', msg: 'Password is too short (minimum is 6 characters)' },
-          { val: 'a' * 129, msg: 'Password is too long (maximum is 128 characters)' },
+          { val: Faker::Internet.password(min_length: 129, max_length: 150),
+            msg: 'Password is too long (maximum is 128 characters)' },
           { val: 'aaaaaa', msg: 'Password は半角英数字の両方を含めて設定してください' },
           { val: '111111', msg: 'Password は半角英数字の両方を含めて設定してください' },
           { val: 'ａａａ１１１', msg: 'Password は半角英数字の両方を含めて設定してください' },
