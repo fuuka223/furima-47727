@@ -35,7 +35,7 @@ RSpec.describe User, type: :model do
       end
 
       # emailのテスト
-      it 'emailの形式やDBとの重複があると登録できない' do
+      it 'emailの形式違いやDBとの重複があると登録できない' do
         @user.save
         another_user = FactoryBot.build(:user, email: @user.email)
         another_user.valid?
@@ -64,7 +64,7 @@ RSpec.describe User, type: :model do
           @user.valid?
           expect(@user.errors.full_messages).to include(pw[:msg])
         end
-
+        # パスワードの不一致
         @user.password = '111aaa'
         @user.password_confirmation = '222bbb'
         @user.valid?
