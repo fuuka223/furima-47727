@@ -5,6 +5,10 @@ class Item < ApplicationRecord
   belongs_to :shipping_fee_status
   belongs_to :prefecture
   belongs_to :scheduled_delivery
-
   belongs_to :user
+
+  validates :name, :info, :price, presence: true
+  validates :category_id, :sales_status, :shipping_fee_status, :prefecture, :scheduled_delivery,
+            numericality: { other_than: 1, message: "can't be blank" }
+  validates :price, numericality: { only_integer: true, greater_than_or_equal_to: 300, less_than_or_equal_to: 9_999_999 }
 end
