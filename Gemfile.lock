@@ -129,6 +129,7 @@ GEM
     jbuilder (2.14.1)
       actionview (>= 7.0.0)
       activesupport (>= 7.0.0)
+    jp_prefecture (1.1.2)
     json (2.19.3)
     language_server-protocol (3.17.0.5)
     logger (1.7.0)
@@ -332,6 +333,7 @@ DEPENDENCIES
   debug
   importmap-rails
   jbuilder
+  jp_prefecture
   mysql2 (~> 0.5)
   pg
   puma (>= 5.0)
