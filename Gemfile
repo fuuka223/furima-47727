@@ -73,11 +73,16 @@ end
 
 group :development, :test do
   gem "sqlite3"
+  gem 'rspec-rails', '~> 4.0.0'
+  gem 'factory_bot_rails'
+  gem 'faker'
+  gem 'gimei'
 end
 
 group :production do
   gem "pg"
 end
 
+gem "devise"
 gem 'active_hash'
 gem 'jp_prefecture'

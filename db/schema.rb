@@ -10,7 +10,8 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.1].define(version: 2026_04_02_062117) do
+
+ActiveRecord::Schema[7.1].define(version: 2026_04_02_062117)  do
   create_table "items", charset: "utf8mb4", collation: "utf8mb4_0900_ai_ci", force: :cascade do |t|
     t.string "name"
     t.text "info"
@@ -45,4 +46,5 @@ ActiveRecord::Schema[7.1].define(version: 2026_04_02_062117) do
   end
 
   add_foreign_key "items", "users"
+
 end
