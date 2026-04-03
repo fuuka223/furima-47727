@@ -42,14 +42,14 @@ RSpec.describe Item, type: :model do
         attributes.each do |attribute|
           @item.send("#{attribute}=", '1')
           @item.valid?
-          expect(@item.errors.full_messages).to include("#{attribute.to_s.humanize.split.first} can't be blank")
+          expect(@item.errors.full_messages).to include("#{attribute.to_s.humanize} can't be blank")
           @item = FactoryBot.build(:item)
         end
       end
       it 'priceが不適切では出品できない' do
         invalid_prices = [
           { val: '299', msg: 'Price must be greater than or equal to 300' },
-          { val: '10_000_000', msg: 'Price must be less than or equal to 9999999' },
+          { val: '10000000', msg: 'Price must be less than or equal to 9999999' },
           { val: '1000a', msg: 'Price is not a number' }
         ]
         invalid_prices.each do |invalid|
