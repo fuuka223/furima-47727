@@ -161,8 +161,7 @@
       <% if @items.present? %>
         <% @items.each do |item| %>
           <li class='list'>
-            <%# リンクは商品詳細表示機能を作る際に貼ります。 %>
-            <%= link_to '#' do %>
+            <%= link_to item_path(item.id) do %>
             <%= image_tag item.image, class: "item-img" %>
             <div class='item-info'>
               <h3 class='item-name'>
