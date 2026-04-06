@@ -28,9 +28,8 @@
 
     <%= link_to "商品の編集", edit_item_path(@item.id), method: :get, class: "item-red-btn" %>
     <p class="or-text">or</p>
-    
-    <%# 商品削除機能の実装時にパスを編集します。 %>
-    <%= link_to "削除", "#", data: {turbo_method: :delete}, class:"item-destroy" %>
+
+    <%= link_to "削除", item_path(@item), data: {turbo_method: :delete}, class:"item-destroy" %>
 
     <% elsif user_signed_in? %>
 
