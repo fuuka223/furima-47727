@@ -1,0 +1,149 @@
+
+ItemOrder
+  商品購入機能
+    内容に問題ない場合
+D, [2026-04-06T22:14:49.841842 #9640] DEBUG -- :   [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+D, [2026-04-06T22:14:50.751383 #9640] DEBUG -- :   [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+D, [2026-04-06T22:14:50.752338 #9640] DEBUG -- :   [1m[36mUser Exists? (0.5ms)[0m  [1m[34mSELECT 1 AS one FROM `users` WHERE `users`.`email` = CAST('drema_champlin@prosacco.example' AS BINARY) LIMIT 1[0m
+D, [2026-04-06T22:14:50.757311 #9640] DEBUG -- :   [1m[36mUser Create (2.6ms)[0m  [1m[32mINSERT INTO `users` (`email`, `encrypted_password`, `nickname`, `last_name`, `first_name`, `last_name_kana`, `first_name_kana`, `birth_date`, `reset_password_token`, `reset_password_sent_at`, `remember_created_at`, `created_at`, `updated_at`) VALUES ('drema_champlin@prosacco.example', '$2a$04$xvL.lmZXRsrMDLiMQoYeQejgc6fO4QoJQcjtz.rZOcGR6ux6hWLqe', 'ZJ', '稲田', '栄樹', 'イナダ', 'エイジュ', '2015-05-12', NULL, NULL, NULL, '2026-04-06 13:14:50.752852', '2026-04-06 13:14:50.752852')[0m
+D, [2026-04-06T22:14:50.757998 #9640] DEBUG -- :   [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+D, [2026-04-06T22:14:50.842240 #9640] DEBUG -- :   [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+D, [2026-04-06T22:14:50.842811 #9640] DEBUG -- :   [1m[36mUser Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM `users` WHERE `users`.`email` = CAST('magnolia.cremin@cummerata.example' AS BINARY) LIMIT 1[0m
+D, [2026-04-06T22:14:50.844084 #9640] DEBUG -- :   [1m[36mUser Create (0.4ms)[0m  [1m[32mINSERT INTO `users` (`email`, `encrypted_password`, `nickname`, `last_name`, `first_name`, `last_name_kana`, `first_name_kana`, `birth_date`, `reset_password_token`, `reset_password_sent_at`, `remember_created_at`, `created_at`, `updated_at`) VALUES ('magnolia.cremin@cummerata.example', '$2a$04$.2Z9I8LAb8xi0yfA5vznx.00wTImfq5p5k4aZeZCzlyIKyha0DjHa', 'OA', '須田', '玲早', 'スダ', 'レイサ', '2024-07-11', NULL, NULL, NULL, '2026-04-06 13:14:50.843089', '2026-04-06 13:14:50.843089')[0m
+D, [2026-04-06T22:14:50.844678 #9640] DEBUG -- :   [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+D, [2026-04-06T22:14:50.890574 #9640] DEBUG -- :   [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+D, [2026-04-06T22:14:50.904799 #9640] DEBUG -- :   [1m[36mItem Create (0.7ms)[0m  [1m[32mINSERT INTO `items` (`name`, `info`, `category_id`, `sales_status_id`, `shipping_fee_status_id`, `prefecture_id`, `scheduled_delivery_id`, `price`, `user_id`, `created_at`, `updated_at`) VALUES ('Heavy Duty Marble Bottle', 'Maxime quia natus quo.', 2, 2, 2, 2, 2, 2558022, 72, '2026-04-06 13:14:50.903271', '2026-04-06 13:14:50.903271')[0m
+D, [2026-04-06T22:14:50.912008 #9640] DEBUG -- :   [1m[36mActiveStorage::Attachment Load (1.6ms)[0m  [1m[34mSELECT `active_storage_attachments`.* FROM `active_storage_attachments` WHERE `active_storage_attachments`.`record_id` = 36 AND `active_storage_attachments`.`record_type` = 'Item' AND `active_storage_attachments`.`name` = 'image' LIMIT 1[0m
+D, [2026-04-06T22:14:50.914463 #9640] DEBUG -- :   [1m[36mActiveStorage::Blob Create (0.6ms)[0m  [1m[32mINSERT INTO `active_storage_blobs` (`key`, `filename`, `content_type`, `metadata`, `service_name`, `byte_size`, `checksum`, `created_at`) VALUES ('ts6uw3s9url4eahsel8rtxbje4yi', 'test_image.png', 'image/png', '{\"identified\":true}', 'test', 0, '1B2M2Y8AsgTpgAmY7PhCfg==', '2026-04-06 13:14:50.913020')[0m
+D, [2026-04-06T22:14:50.916045 #9640] DEBUG -- :   [1m[36mActiveStorage::Attachment Create (0.5ms)[0m  [1m[32mINSERT INTO `active_storage_attachments` (`name`, `record_type`, `record_id`, `blob_id`, `created_at`) VALUES ('image', 'Item', 36, 36, '2026-04-06 13:14:50.914814')[0m
+D, [2026-04-06T22:14:50.918470 #9640] DEBUG -- :   [1m[36mItem Update (0.5ms)[0m  [1m[33mUPDATE `items` SET `items`.`updated_at` = '2026-04-06 13:14:50.916518' WHERE `items`.`id` = 36[0m
+D, [2026-04-06T22:14:50.918898 #9640] DEBUG -- :   [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+D, [2026-04-06T22:14:50.937108 #9640] DEBUG -- :   [1m[36mActiveStorage::Blob Load (2.0ms)[0m  [1m[34mSELECT `active_storage_blobs`.* FROM `active_storage_blobs` WHERE `active_storage_blobs`.`id` = 36 LIMIT 1[0m
+D, [2026-04-06T22:14:51.047130 #9640] DEBUG -- :   [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+D, [2026-04-06T22:14:51.048184 #9640] DEBUG -- :   [1m[36mActiveStorage::Blob Update (0.8ms)[0m  [1m[33mUPDATE `active_storage_blobs` SET `active_storage_blobs`.`metadata` = '{\"identified\":true,\"analyzed\":true}' WHERE `active_storage_blobs`.`id` = 36[0m
+D, [2026-04-06T22:14:51.055866 #9640] DEBUG -- :   [1m[36mActiveStorage::Attachment Load (0.5ms)[0m  [1m[34mSELECT `active_storage_attachments`.* FROM `active_storage_attachments` WHERE `active_storage_attachments`.`blob_id` = 36[0m
+D, [2026-04-06T22:14:51.070830 #9640] DEBUG -- :   [1m[36mItem Load (0.9ms)[0m  [1m[34mSELECT `items`.* FROM `items` WHERE `items`.`id` = 36[0m
+D, [2026-04-06T22:14:51.072813 #9640] DEBUG -- :   [1m[36mItem Update (0.6ms)[0m  [1m[33mUPDATE `items` SET `items`.`updated_at` = '2026-04-06 13:14:51.071625' WHERE `items`.`id` = 36[0m
+D, [2026-04-06T22:14:51.073338 #9640] DEBUG -- :   [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+D, [2026-04-06T22:14:51.084574 #9640] DEBUG -- :   [1m[36mTRANSACTION (2.2ms)[0m  [1m[31mROLLBACK[0m
+      すべての値が正しく入力されていれば保存できること
+D, [2026-04-06T22:14:51.085649 #9640] DEBUG -- :   [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+D, [2026-04-06T22:14:51.089203 #9640] DEBUG -- :   [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+D, [2026-04-06T22:14:51.089826 #9640] DEBUG -- :   [1m[36mUser Exists? (0.4ms)[0m  [1m[34mSELECT 1 AS one FROM `users` WHERE `users`.`email` = CAST('leonida@kris.example' AS BINARY) LIMIT 1[0m
+D, [2026-04-06T22:14:51.091125 #9640] DEBUG -- :   [1m[36mUser Create (0.4ms)[0m  [1m[32mINSERT INTO `users` (`email`, `encrypted_password`, `nickname`, `last_name`, `first_name`, `last_name_kana`, `first_name_kana`, `birth_date`, `reset_password_token`, `reset_password_sent_at`, `remember_created_at`, `created_at`, `updated_at`) VALUES ('leonida@kris.example', '$2a$04$VNbQcoq9jXAg55dQWtqtBO9U/PdiSr1WHtA8t7O/OYph9Vl663Iqy', 'JM', '黒沢', '真夢', 'クロサワ', 'マユメ', '2013-10-03', NULL, NULL, NULL, '2026-04-06 13:14:51.090127', '2026-04-06 13:14:51.090127')[0m
+D, [2026-04-06T22:14:51.091515 #9640] DEBUG -- :   [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+D, [2026-04-06T22:14:51.095112 #9640] DEBUG -- :   [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+D, [2026-04-06T22:14:51.095696 #9640] DEBUG -- :   [1m[36mUser Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM `users` WHERE `users`.`email` = CAST('isidro@spencer-cassin.example' AS BINARY) LIMIT 1[0m
+D, [2026-04-06T22:14:51.097195 #9640] DEBUG -- :   [1m[36mUser Create (0.4ms)[0m  [1m[32mINSERT INTO `users` (`email`, `encrypted_password`, `nickname`, `last_name`, `first_name`, `last_name_kana`, `first_name_kana`, `birth_date`, `reset_password_token`, `reset_password_sent_at`, `remember_created_at`, `created_at`, `updated_at`) VALUES ('isidro@spencer-cassin.example', '$2a$04$UsjVU1VeID1LFOjUn0Jaa.c5fIXRUzWI7QBtpvhYkyzhxeoPhoCFm', 'OZ', '園田', '理華', 'ソノダ', 'トモカ', '2016-07-30', NULL, NULL, NULL, '2026-04-06 13:14:51.096010', '2026-04-06 13:14:51.096010')[0m
+D, [2026-04-06T22:14:51.097686 #9640] DEBUG -- :   [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+D, [2026-04-06T22:14:51.104037 #9640] DEBUG -- :   [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+D, [2026-04-06T22:14:51.104701 #9640] DEBUG -- :   [1m[36mItem Create (0.9ms)[0m  [1m[32mINSERT INTO `items` (`name`, `info`, `category_id`, `sales_status_id`, `shipping_fee_status_id`, `prefecture_id`, `scheduled_delivery_id`, `price`, `user_id`, `created_at`, `updated_at`) VALUES ('Rustic Granite Chair', 'Sequi architecto praesentium dolore.', 2, 2, 2, 2, 2, 7832048, 74, '2026-04-06 13:14:51.102872', '2026-04-06 13:14:51.102872')[0m
+D, [2026-04-06T22:14:51.106293 #9640] DEBUG -- :   [1m[36mActiveStorage::Attachment Load (0.4ms)[0m  [1m[34mSELECT `active_storage_attachments`.* FROM `active_storage_attachments` WHERE `active_storage_attachments`.`record_id` = 37 AND `active_storage_attachments`.`record_type` = 'Item' AND `active_storage_attachments`.`name` = 'image' LIMIT 1[0m
+D, [2026-04-06T22:14:51.108053 #9640] DEBUG -- :   [1m[36mActiveStorage::Blob Create (0.4ms)[0m  [1m[32mINSERT INTO `active_storage_blobs` (`key`, `filename`, `content_type`, `metadata`, `service_name`, `byte_size`, `checksum`, `created_at`) VALUES ('p4e5ofaj42a09c7t2cyatwa2thgf', 'test_image.png', 'image/png', '{\"identified\":true}', 'test', 0, '1B2M2Y8AsgTpgAmY7PhCfg==', '2026-04-06 13:14:51.107012')[0m
+D, [2026-04-06T22:14:51.109270 #9640] DEBUG -- :   [1m[36mActiveStorage::Attachment Create (0.4ms)[0m  [1m[32mINSERT INTO `active_storage_attachments` (`name`, `record_type`, `record_id`, `blob_id`, `created_at`) VALUES ('image', 'Item', 37, 37, '2026-04-06 13:14:51.108388')[0m
+D, [2026-04-06T22:14:51.111384 #9640] DEBUG -- :   [1m[36mItem Update (0.5ms)[0m  [1m[33mUPDATE `items` SET `items`.`updated_at` = '2026-04-06 13:14:51.109620' WHERE `items`.`id` = 37[0m
+D, [2026-04-06T22:14:51.111797 #9640] DEBUG -- :   [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+D, [2026-04-06T22:14:51.117033 #9640] DEBUG -- :   [1m[36mTRANSACTION (1.7ms)[0m  [1m[31mROLLBACK[0m
+      buildingは空でも保存できること
+    内容に問題がある場合
+D, [2026-04-06T22:14:51.118624 #9640] DEBUG -- :   [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+      post_codeが空だと保存できないこと (FAILED - 1)
+D, [2026-04-06T22:14:51.119564 #9640] DEBUG -- :   [1m[36mActiveStorage::Blob Load (1.8ms)[0m  [1m[34mSELECT `active_storage_blobs`.* FROM `active_storage_blobs` WHERE `active_storage_blobs`.`id` = 37 LIMIT 1[0m
+D, [2026-04-07T09:19:33.950901 #9640] DEBUG -- :   [1m[36mTRANSACTION (39883409.3ms)[0m  [1m[35mBEGIN[0m
+
+Failures:
+
+  1) ItemOrder 商品購入機能 内容に問題がある場合 post_codeが空だと保存できないこと
+     Failure/Error: _query(sql, @query_options.merge(options))
+
+     ActiveRecord::StatementInvalid:
+       Mysql2::Error: This connection is in use by: #<Fiber:0x000000010cba15a0 (resumed)>
+     # /Users/admin/.rbenv/versions/3.2.0/lib/ruby/gems/3.2.0/gems/mysql2-0.5.7/lib/mysql2/client.rb:146:in `_query'
+     # /Users/admin/.rbenv/versions/3.2.0/lib/ruby/gems/3.2.0/gems/mysql2-0.5.7/lib/mysql2/client.rb:146:in `block in query'
+     # /Users/admin/.rbenv/versions/3.2.0/lib/ruby/gems/3.2.0/gems/mysql2-0.5.7/lib/mysql2/client.rb:145:in `handle_interrupt'
+     # /Users/admin/.rbenv/versions/3.2.0/lib/ruby/gems/3.2.0/gems/mysql2-0.5.7/lib/mysql2/client.rb:145:in `query'
+     # /Users/admin/.rbenv/versions/3.2.0/lib/ruby/gems/3.2.0/gems/activerecord-7.1.6/lib/active_record/connection_adapters/mysql2/database_statements.rb:100:in `block (2 levels) in raw_execute'
+     # /Users/admin/.rbenv/versions/3.2.0/lib/ruby/gems/3.2.0/gems/activerecord-7.1.6/lib/active_record/connection_adapters/abstract_adapter.rb:1027:in `block in with_raw_connection'
+     # /Users/admin/.rbenv/versions/3.2.0/lib/ruby/gems/3.2.0/gems/activesupport-7.1.6/lib/active_support/concurrency/null_lock.rb:9:in `synchronize'
+     # /Users/admin/.rbenv/versions/3.2.0/lib/ruby/gems/3.2.0/gems/activerecord-7.1.6/lib/active_record/connection_adapters/abstract_adapter.rb:999:in `with_raw_connection'
+     # /Users/admin/.rbenv/versions/3.2.0/lib/ruby/gems/3.2.0/gems/activerecord-7.1.6/lib/active_record/connection_adapters/mysql2/database_statements.rb:98:in `block in raw_execute'
+     # /Users/admin/.rbenv/versions/3.2.0/lib/ruby/gems/3.2.0/gems/activesupport-7.1.6/lib/active_support/notifications/instrumenter.rb:58:in `instrument'
+     # /Users/admin/.rbenv/versions/3.2.0/lib/ruby/gems/3.2.0/gems/activerecord-7.1.6/lib/active_record/connection_adapters/abstract_adapter.rb:1142:in `log'
+     # /Users/admin/.rbenv/versions/3.2.0/lib/ruby/gems/3.2.0/gems/activerecord-7.1.6/lib/active_record/connection_adapters/mysql2/database_statements.rb:97:in `raw_execute'
+     # /Users/admin/.rbenv/versions/3.2.0/lib/ruby/gems/3.2.0/gems/activerecord-7.1.6/lib/active_record/connection_adapters/abstract/database_statements.rb:521:in `internal_execute'
+     # /Users/admin/.rbenv/versions/3.2.0/lib/ruby/gems/3.2.0/gems/activerecord-7.1.6/lib/active_record/connection_adapters/abstract_mysql_adapter.rb:237:in `begin_db_transaction'
+     # /Users/admin/.rbenv/versions/3.2.0/lib/ruby/gems/3.2.0/gems/activerecord-7.1.6/lib/active_record/connection_adapters/abstract/transaction.rb:373:in `materialize!'
+     # /Users/admin/.rbenv/versions/3.2.0/lib/ruby/gems/3.2.0/gems/activerecord-7.1.6/lib/active_record/connection_adapters/abstract/transaction.rb:449:in `block in begin_transaction'
+     # /Users/admin/.rbenv/versions/3.2.0/lib/ruby/gems/3.2.0/gems/activesupport-7.1.6/lib/active_support/concurrency/null_lock.rb:9:in `synchronize'
+     # /Users/admin/.rbenv/versions/3.2.0/lib/ruby/gems/3.2.0/gems/activerecord-7.1.6/lib/active_record/connection_adapters/abstract/transaction.rb:416:in `begin_transaction'
+     # /Users/admin/.rbenv/versions/3.2.0/lib/ruby/gems/3.2.0/gems/activerecord-7.1.6/lib/active_record/connection_adapters/abstract/database_statements.rb:352:in `begin_transaction'
+     # /Users/admin/.rbenv/versions/3.2.0/lib/ruby/gems/3.2.0/gems/activerecord-7.1.6/lib/active_record/test_fixtures.rb:150:in `block in setup_fixtures'
+     # /Users/admin/.rbenv/versions/3.2.0/lib/ruby/gems/3.2.0/gems/activerecord-7.1.6/lib/active_record/test_fixtures.rb:149:in `each'
+     # /Users/admin/.rbenv/versions/3.2.0/lib/ruby/gems/3.2.0/gems/activerecord-7.1.6/lib/active_record/test_fixtures.rb:149:in `setup_fixtures'
+     # /Users/admin/.rbenv/versions/3.2.0/lib/ruby/gems/3.2.0/gems/activerecord-7.1.6/lib/active_record/test_fixtures.rb:10:in `before_setup'
+     # /Users/admin/.rbenv/versions/3.2.0/lib/ruby/gems/3.2.0/gems/rspec-rails-4.0.2/lib/rspec/rails/adapters.rb:74:in `block (2 levels) in <module:MinitestLifecycleAdapter>'
+     # /Users/admin/.rbenv/versions/3.2.0/lib/ruby/gems/3.2.0/gems/rspec-core-3.13.6/lib/rspec/core/example.rb:457:in `instance_exec'
+     # /Users/admin/.rbenv/versions/3.2.0/lib/ruby/gems/3.2.0/gems/rspec-core-3.13.6/lib/rspec/core/example.rb:457:in `instance_exec'
+     # /Users/admin/.rbenv/versions/3.2.0/lib/ruby/gems/3.2.0/gems/rspec-core-3.13.6/lib/rspec/core/hooks.rb:390:in `execute_with'
+     # /Users/admin/.rbenv/versions/3.2.0/lib/ruby/gems/3.2.0/gems/rspec-core-3.13.6/lib/rspec/core/hooks.rb:628:in `block (2 levels) in run_around_example_hooks_for'
+     # /Users/admin/.rbenv/versions/3.2.0/lib/ruby/gems/3.2.0/gems/rspec-core-3.13.6/lib/rspec/core/example.rb:352:in `call'
+     # /Users/admin/.rbenv/versions/3.2.0/lib/ruby/gems/3.2.0/gems/rspec-core-3.13.6/lib/rspec/core/hooks.rb:629:in `run_around_example_hooks_for'
+     # /Users/admin/.rbenv/versions/3.2.0/lib/ruby/gems/3.2.0/gems/rspec-core-3.13.6/lib/rspec/core/hooks.rb:486:in `run'
+     # /Users/admin/.rbenv/versions/3.2.0/lib/ruby/gems/3.2.0/gems/rspec-core-3.13.6/lib/rspec/core/example.rb:468:in `with_around_example_hooks'
+     # /Users/admin/.rbenv/versions/3.2.0/lib/ruby/gems/3.2.0/gems/rspec-core-3.13.6/lib/rspec/core/example.rb:511:in `with_around_and_singleton_context_hooks'
+     # /Users/admin/.rbenv/versions/3.2.0/lib/ruby/gems/3.2.0/gems/rspec-core-3.13.6/lib/rspec/core/example.rb:259:in `run'
+     # /Users/admin/.rbenv/versions/3.2.0/lib/ruby/gems/3.2.0/gems/rspec-core-3.13.6/lib/rspec/core/example_group.rb:653:in `block in run_examples'
+     # /Users/admin/.rbenv/versions/3.2.0/lib/ruby/gems/3.2.0/gems/rspec-core-3.13.6/lib/rspec/core/example_group.rb:649:in `map'
+     # /Users/admin/.rbenv/versions/3.2.0/lib/ruby/gems/3.2.0/gems/rspec-core-3.13.6/lib/rspec/core/example_group.rb:649:in `run_examples'
+     # /Users/admin/.rbenv/versions/3.2.0/lib/ruby/gems/3.2.0/gems/rspec-core-3.13.6/lib/rspec/core/example_group.rb:614:in `run'
+     # /Users/admin/.rbenv/versions/3.2.0/lib/ruby/gems/3.2.0/gems/rspec-core-3.13.6/lib/rspec/core/example_group.rb:615:in `block in run'
+     # /Users/admin/.rbenv/versions/3.2.0/lib/ruby/gems/3.2.0/gems/rspec-core-3.13.6/lib/rspec/core/example_group.rb:615:in `map'
+     # /Users/admin/.rbenv/versions/3.2.0/lib/ruby/gems/3.2.0/gems/rspec-core-3.13.6/lib/rspec/core/example_group.rb:615:in `run'
+     # /Users/admin/.rbenv/versions/3.2.0/lib/ruby/gems/3.2.0/gems/rspec-core-3.13.6/lib/rspec/core/example_group.rb:615:in `block in run'
+     # /Users/admin/.rbenv/versions/3.2.0/lib/ruby/gems/3.2.0/gems/rspec-core-3.13.6/lib/rspec/core/example_group.rb:615:in `map'
+     # /Users/admin/.rbenv/versions/3.2.0/lib/ruby/gems/3.2.0/gems/rspec-core-3.13.6/lib/rspec/core/example_group.rb:615:in `run'
+     # /Users/admin/.rbenv/versions/3.2.0/lib/ruby/gems/3.2.0/gems/rspec-core-3.13.6/lib/rspec/core/runner.rb:121:in `block (3 levels) in run_specs'
+     # /Users/admin/.rbenv/versions/3.2.0/lib/ruby/gems/3.2.0/gems/rspec-core-3.13.6/lib/rspec/core/runner.rb:121:in `map'
+     # /Users/admin/.rbenv/versions/3.2.0/lib/ruby/gems/3.2.0/gems/rspec-core-3.13.6/lib/rspec/core/runner.rb:121:in `block (2 levels) in run_specs'
+     # /Users/admin/.rbenv/versions/3.2.0/lib/ruby/gems/3.2.0/gems/rspec-core-3.13.6/lib/rspec/core/configuration.rb:2097:in `with_suite_hooks'
+     # /Users/admin/.rbenv/versions/3.2.0/lib/ruby/gems/3.2.0/gems/rspec-core-3.13.6/lib/rspec/core/runner.rb:116:in `block in run_specs'
+     # /Users/admin/.rbenv/versions/3.2.0/lib/ruby/gems/3.2.0/gems/rspec-core-3.13.6/lib/rspec/core/reporter.rb:74:in `report'
+     # /Users/admin/.rbenv/versions/3.2.0/lib/ruby/gems/3.2.0/gems/rspec-core-3.13.6/lib/rspec/core/runner.rb:115:in `run_specs'
+     # /Users/admin/.rbenv/versions/3.2.0/lib/ruby/gems/3.2.0/gems/rspec-core-3.13.6/lib/rspec/core/runner.rb:89:in `run'
+     # /Users/admin/.rbenv/versions/3.2.0/lib/ruby/gems/3.2.0/gems/rspec-core-3.13.6/lib/rspec/core/runner.rb:71:in `run'
+     # /Users/admin/.rbenv/versions/3.2.0/lib/ruby/gems/3.2.0/gems/rspec-core-3.13.6/lib/rspec/core/runner.rb:45:in `invoke'
+     # /Users/admin/.rbenv/versions/3.2.0/lib/ruby/gems/3.2.0/gems/rspec-core-3.13.6/exe/rspec:4:in `<top (required)>'
+     # /Users/admin/.rbenv/versions/3.2.0/bin/rspec:25:in `load'
+     # /Users/admin/.rbenv/versions/3.2.0/bin/rspec:25:in `<top (required)>'
+     # /Users/admin/.rbenv/versions/3.2.0/lib/ruby/gems/3.2.0/gems/bundler-2.5.13/lib/bundler/cli/exec.rb:58:in `load'
+     # /Users/admin/.rbenv/versions/3.2.0/lib/ruby/gems/3.2.0/gems/bundler-2.5.13/lib/bundler/cli/exec.rb:58:in `kernel_load'
+     # /Users/admin/.rbenv/versions/3.2.0/lib/ruby/gems/3.2.0/gems/bundler-2.5.13/lib/bundler/cli/exec.rb:23:in `run'
+     # /Users/admin/.rbenv/versions/3.2.0/lib/ruby/gems/3.2.0/gems/bundler-2.5.13/lib/bundler/cli.rb:455:in `exec'
+     # /Users/admin/.rbenv/versions/3.2.0/lib/ruby/gems/3.2.0/gems/bundler-2.5.13/lib/bundler/vendor/thor/lib/thor/command.rb:28:in `run'
+     # /Users/admin/.rbenv/versions/3.2.0/lib/ruby/gems/3.2.0/gems/bundler-2.5.13/lib/bundler/vendor/thor/lib/thor/invocation.rb:127:in `invoke_command'
+     # /Users/admin/.rbenv/versions/3.2.0/lib/ruby/gems/3.2.0/gems/bundler-2.5.13/lib/bundler/vendor/thor/lib/thor.rb:527:in `dispatch'
+     # /Users/admin/.rbenv/versions/3.2.0/lib/ruby/gems/3.2.0/gems/bundler-2.5.13/lib/bundler/cli.rb:35:in `dispatch'
+     # /Users/admin/.rbenv/versions/3.2.0/lib/ruby/gems/3.2.0/gems/bundler-2.5.13/lib/bundler/vendor/thor/lib/thor/base.rb:584:in `start'
+     # /Users/admin/.rbenv/versions/3.2.0/lib/ruby/gems/3.2.0/gems/bundler-2.5.13/lib/bundler/cli.rb:29:in `start'
+     # /Users/admin/.rbenv/versions/3.2.0/lib/ruby/gems/3.2.0/gems/bundler-2.5.13/exe/bundle:28:in `block in <top (required)>'
+     # /Users/admin/.rbenv/versions/3.2.0/lib/ruby/gems/3.2.0/gems/bundler-2.5.13/lib/bundler/friendly_errors.rb:117:in `with_friendly_errors'
+     # /Users/admin/.rbenv/versions/3.2.0/lib/ruby/gems/3.2.0/gems/bundler-2.5.13/exe/bundle:20:in `<top (required)>'
+     # /Users/admin/.rbenv/versions/3.2.0/bin/bundle:25:in `load'
+     # /Users/admin/.rbenv/versions/3.2.0/bin/bundle:25:in `<main>'
+     # 
+     #   Showing full backtrace because every line was filtered out.
+     #   See docs for RSpec::Configuration#backtrace_exclusion_patterns and
+     #   RSpec::Configuration#backtrace_inclusion_patterns for more information.
+     # ------------------
+     # --- Caused by: ---
+     # Mysql2::Error:
+     #   This connection is in use by: #<Fiber:0x000000010cba15a0 (resumed)>
+     #   /Users/admin/.rbenv/versions/3.2.0/lib/ruby/gems/3.2.0/gems/mysql2-0.5.7/lib/mysql2/client.rb:146:in `_query'
+
+Finished in 664 minutes 44 seconds (files took 7.32 seconds to load)
+4 examples, 1 failure
+
+Failed examples:
+
+rspec ./spec/models/item_order_spec.rb:23 # ItemOrder 商品購入機能 内容に問題がある場合 post_codeが空だと保存できないこと
+
