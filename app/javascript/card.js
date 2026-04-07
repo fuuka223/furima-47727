@@ -3,7 +3,7 @@ const pay = () => {
   const form = document.getElementById('charge-form');
   if (!form) return;
   // PAY.JPテスト公開鍵
-  const payjp = Payjp('pk_test_943d250799b9bfec4310337c'); 
+const payjp = Payjp(gon.public_key);
   // 入力用エレメントの作成
   const elements = payjp.elements();
   // カード番号・有効期限・セキュリティコードの入力用エレメントの設定
