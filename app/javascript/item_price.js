@@ -1,6 +1,11 @@
 const priceInput = () => {
   // 販売価格の入力フォームの取得
   const priceInput = document.getElementById("item-price")
+
+  // 要素が見つからない場合は処理を終了
+  if (!priceInput) return;
+
+  // 要素がある場合
   // 入力された際のイベント
   priceInput.addEventListener("input", () => {
     // 入力された値を変数に代入

@@ -31,6 +31,9 @@ rescue ActiveRecord::PendingMigrationError => e
   exit 1
 end
 RSpec.configure do |config|
+  ActiveRecord::Base.logger = nil
+  # ActiveRecord::Base.logger = Logger.new(STDOUT)
+
   # Remove this line if you're not using ActiveRecord or ActiveRecord fixtures
   config.fixture_path = "#{::Rails.root}/spec/fixtures"
 
@@ -61,4 +64,11 @@ RSpec.configure do |config|
   config.filter_rails_from_backtrace!
   # arbitrary gems may also be filtered via:
   # config.filter_gems_from_backtrace("gem name")
+  config.before(:each) do
+    ActiveRecord::ConnectionAdapters::ConnectionPool.class_eval do
+      def current_thread_id
+        Thread.current.object_id
+      end
+    end
+  end
 end
