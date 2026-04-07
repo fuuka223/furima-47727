@@ -101,7 +101,7 @@ RSpec.describe ItemOrder, type: :model do
       end
       it '既に購入された商品は購入できない' do
         another_user = FactoryBot.create(:user)
-        another_order = Order.create(user_id: another_user.id, item_id: @item.id)
+        Order.create(user_id: another_user.id, item_id: @item.id)
         @item_order.valid?
         expect(@item_order.errors.full_messages).to include('Item has already been taken')
       end
